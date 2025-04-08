@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>(10);
         System.out.print("请输入10个整数, 以空格分割:");
         boolean inputValid = false;
         Scanner scanner = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class Main {
             String[] inputNumbers = inputText.split("\\s+");
             try {
                 if(inputNumbers.length != 10) {
-                    System.out.print("输入的数字数量不足，请重新输入10个整数, 以空格分割：");
+                    System.out.print("输入的整数数量不是10个，请重新输入10个整数, 以空格分割：");
                     continue;
                 }
                 for (String input : inputNumbers) {
